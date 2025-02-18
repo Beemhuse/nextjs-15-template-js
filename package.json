@@ -5,19 +5,43 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "prettier-check": "prettier --check .",
+    "prettier-format": "prettier --write .",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,md,json}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.66.7",
+    "axios": "^1.7.9",
+    "next": "15.1.7",
     "react": "^19.0.0",
+    "react-cookie": "^7.2.2",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-toastify": "^11.0.3"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^9",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9.20.1",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "git-format-staged": "^3.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "postcss": "^8",
+    "prettier": "^3.5.1",
+    "tailwindcss": "^3.4.1"
   }
 }
