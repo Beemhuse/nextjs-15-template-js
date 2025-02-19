@@ -3,3 +3,7 @@ build
 coverage
 commitlint.config.js
 tailwind.config.mjs
+.github
+eslint.config.mjs
+postcss.config.mjs
+next.config.mjs
