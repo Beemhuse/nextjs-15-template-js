@@ -1,24 +1,10 @@
-import { AUTH_ENDPOINTS } from '@/constants/endpoints'
-import { useCreateData } from '@/hooks/useApiService'
+import LoginForm from '@/component/auth/LoginForm'
 import React from 'react'
 
-export default function page() {
-  const login = useCreateData(AUTH_ENDPOINTS.LOGIN, 'login')
-
-  function submit() {
-    login.mutate(data, {
-      onSuccess: (res) => {
-        console.log(res)
-      },
-      onError: (err) => {
-        console.log(err)
-      },
-    })
-  }
-
+export default async function page() {
   return (
     <div>
-      <button>{login.isPending ? 'loading' : 'Login'}</button>
+      <LoginForm />
     </div>
   )
 }
