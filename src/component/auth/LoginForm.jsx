@@ -1,3 +1,4 @@
+'use client'
 import { AUTH_ENDPOINTS } from '@/constants/endpoints'
 import { useCreateData } from '@/hooks/useApiService'
 import React from 'react'
