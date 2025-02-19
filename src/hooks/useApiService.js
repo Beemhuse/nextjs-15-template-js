@@ -1,7 +1,13 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 
 import { toast } from 'react-toastify'
-import { fetchData, patchData, postData, updateData } from '@/config/service'
+import {
+  deleteData,
+  fetchData,
+  patchData,
+  postData,
+  updateData,
+} from '@/config/service'
 import { handleGenericError } from '@/lib/errorHandler'
 
 export const useFetchData = (endpoint, queryKey) => {

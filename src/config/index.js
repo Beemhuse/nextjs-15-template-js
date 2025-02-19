@@ -7,7 +7,9 @@ export default function init() {
   axios.defaults.withCredentials = false
   const cookies = new Cookies()
   const accessValue = cookies.get('your-token')
-  axios.defaults.headers.common.Authorization = `Bearer ${accessValue}`
+  if (accessValue) {
+    axios.defaults.headers.common.Authorization = `Bearer ${accessValue}`
+  }
 
   axios.interceptors.response.use(
     (response) => response,
